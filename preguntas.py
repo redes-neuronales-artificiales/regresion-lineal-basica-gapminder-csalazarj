@@ -103,7 +103,7 @@ def pregunta_03():
     y_pred = reg.predict(prediction_space)
 
     # Imprima el R^2 del modelo con 4 decimales
-    print(reg.score(X_fertility, y_pred).round(4))
+    print(reg.score(X_fertility, y_life).round(4))
 
 
 def pregunta_04():
