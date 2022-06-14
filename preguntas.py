@@ -28,10 +28,10 @@ def pregunta_01():
     print(X.shape)
 
     # Transforme `y` a un array de numpy usando reshape
-    y_reshaped = y.reshape(y.shape)
+    y_reshaped = y.reshape(139,1)
 
     # Trasforme `X` a un array de numpy usando reshape
-    X_reshaped = X.reshape(X.shape)
+    X_reshaped = X.reshape(139,1)
 
     # Imprima las nuevas dimensiones de `y`
     print(y_reshaped.shape)
@@ -78,10 +78,10 @@ def pregunta_03():
     df = pd.read_csv('gm_2008_region.csv')
 
     # Asigne a la variable los valores de la columna `fertility`
-    X_fertility = df['fertility'].to_numpy().reshape(-1,1)
+    X_fertility = np.array(df['fertility']).reshape(-1,1)
 
     # Asigne a la variable los valores de la columna `life`
-    y_life = df['life'].to_numpy().reshape(-1,1)
+    y_life = np.array(df['life']).reshape(-1,1)
 
     # Importe LinearRegression
     from sklearn.linear_model import LinearRegression
@@ -123,10 +123,10 @@ def pregunta_04():
     df = pd.read_csv('gm_2008_region.csv')
 
     # Asigne a la variable los valores de la columna `fertility`
-    X_fertility = df['fertility'].to_numpy.reshape(-1,1)
+    X_fertility = np.array(df['fertility']).reshape(-1,1)
 
     # Asigne a la variable los valores de la columna `life`
-    y_life = df['life'].to_numpy.reshape(-1,1)
+    y_life = np.array(df['life']).reshape(-1,1)
     # Divida los datos de entrenamiento y prueba. La semilla del generador de números
     # aleatorios es 53. El tamaño de la muestra de entrenamiento es del 80%
     (X_train, X_test, y_train, y_test,) = train_test_split(
